@@ -22,7 +22,7 @@ npm install unoconv-promise
 
 ## Usage
 
-### Convert files
+### Convert files: return Buffer
 
 ```
 const unoconv = require('unoconv-promise')
@@ -31,6 +31,22 @@ unoconv.convert('./mydoc.doc')
   .then((fileBuffer) => {
     // Converted file buffer
     return Promise.resolve(fileBuffer)
+  })
+  .catch((e) => {
+    throw(e)
+  })
+```
+
+### Convert files: return output file path
+
+```
+const unoconv = require('unoconv-promise')
+
+unoconv.convert('./mydoc.doc', {
+    output: "./result.pdf"
+  })
+  .then((outputFilePath) => {
+    // Converted file outputFilePath
   })
   .catch((e) => {
     throw(e)

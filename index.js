@@ -2,15 +2,17 @@ const childProcess = require('child_process')
 const mime = require('mime')
 const debug = require('debug')('unoconv-promise')
 const unoconv = exports = module.exports = {}
-class UnsupportedError extends Error {}
 
 const parseOptions = (options) => {
   let bin = 'unoconv'
   let childArgs = []
   if (options.timeout) {
-    childArgs.push('-f' + options.outputFormat)
+    childArgs.push('-T' + options.timeout)
   } else {
     childArgs.push('-T' + 10) //Default: wait 10 seconds
+  }
+  if (options.output) {
+    childArgs.push(`-o ${options.output}`)
   }
   if (options.outputFormat)
     childArgs.push('-f' + options.outputFormat)
@@ -21,6 +23,7 @@ const parseOptions = (options) => {
       childArgs.push(arg)
     })
   }
+  debug(childArgs)
   return {
     bin: options.bin || bin,
     args: childArgs
