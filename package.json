@@ -1,0 +1,23 @@
+{
+  "name": "unoconv-promise",
+  "version": "0.1.0",
+  "description": "Node.js wrapper with Promise for converting documents with unoconv",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanhanwu/Unoconv-Promise.git"
+  },
+  "keywords": [
+    "unoconv",
+    "convert"
+  ],
+  "author": "Ryan Wu <hello@ryanwu.me>",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/ryanhanwu/Unoconv-Promise/issues"
+  },
+  "homepage": "https://github.com/ryanhanwu/Unoconv-Promise#readme"
+}
