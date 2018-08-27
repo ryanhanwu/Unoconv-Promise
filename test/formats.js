@@ -4,10 +4,9 @@ const expect = chai.expect;
 
 const unoconv = require('../index.js')
 
-describe('unoconv:convert', function () {
-
+describe('unoconv:formats', function () {
   it('should list all supported formats', function (done) {
-    unoconv.showFormats()
+    unoconv.formats()
       .then((formats) => {
         expect(formats).to.be.an.instanceOf(Object)
         expect(formats.document).to.be.an.instanceOf(Array)

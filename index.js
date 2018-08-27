@@ -2,6 +2,7 @@ const childProcess = require('child_process')
 const mime = require('mime')
 const debug = require('debug')('unoconv-promise')
 const unoconv = exports = module.exports = {}
+class UnsupportedError extends Error {}
 
 const parseOptions = (options) => {
   let bin = 'unoconv'
@@ -81,14 +82,13 @@ unoconv.listen = function (options = {}) {
   return childProcess.spawn(parsedOptions.bin, args)
 }
 
-
 /**
  * Display supported conversion formats.
  *
  * @param {Object} options
  * @return {Promise} An Object represents all formats supported
  */
-unoconv.showFormats = function (options = {}) {
+unoconv.formats = function (options = {}) {
   return new Promise(function (resolve, reject) {
     const args = ['--show']
     const supportedFormats = {

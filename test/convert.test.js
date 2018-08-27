@@ -29,13 +29,4 @@ describe('unoconv:convert', function () {
         done()
       })
   })
-  it('should be rejected if file doesn\'t exist', function (done) {
-    unoconv.convert(TEST_N_FILE2)
-      .then(() => {
-        done(new Error('Should not pass here'))
-      })
-      .catch((e) => {
-        done()
-      })
-  })
 })
