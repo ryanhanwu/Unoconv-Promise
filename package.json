@@ -4,7 +4,7 @@
   "description": "Node.js wrapper with Promise for converting documents with unoconv",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "mocha --exit"
   },
   "repository": {
     "type": "git",
@@ -15,9 +15,18 @@
     "convert"
   ],
   "author": "Ryan Wu <hello@ryanwu.me>",
-  "license": "GPL-3.0-or-later",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/ryanhanwu/Unoconv-Promise/issues"
   },
-  "homepage": "https://github.com/ryanhanwu/Unoconv-Promise#readme"
+  "homepage": "https://github.com/ryanhanwu/Unoconv-Promise#readme",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "debug": "^3.1.0",
+    "mime": "^2.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.4.0",
+    "mocha": "^5.2.0"
+  }
 }
