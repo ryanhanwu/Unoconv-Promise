@@ -91,12 +91,8 @@ unoconv.listen = function (options = {}) {
 unoconv.formats = function (options = {}) {
   return new Promise(function (resolve, reject) {
     const args = ['--show']
-    const supportedFormats = {
-      document: [],
-      graphics: [],
-      presentation: [],
-      spreadsheet: []
-    }
+    const supportedFormats = []
+
     const parsedOptions = parseOptions(options)
     args.concat(parsedOptions.args)
 
@@ -137,8 +133,9 @@ unoconv.formats = function (options = {}) {
           }
 
           if (format && extension && description) {
-            supportedFormats[docType].push({
+            supportedFormats.push({
               'format': format,
+              'doctype': docType,
               'extension': extension,
               'description': description,
               'mime': mime.getType(extension)
@@ -146,14 +143,6 @@ unoconv.formats = function (options = {}) {
           }
         }
       })
-
-      if (supportedFormats.document.length < 1 &&
-        supportedFormats.graphics.length < 1 &&
-        supportedFormats.presentation.length < 1 &&
-        supportedFormats.spreadsheet.length < 1) {
-        return reject(new Error('Unable to detect supported formats'))
-      }
-
       resolve(supportedFormats)
     })
   })
