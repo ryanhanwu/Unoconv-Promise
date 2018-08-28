@@ -17,6 +17,15 @@ describe('unoconv.formats()', function () {
         expect(singleFormat).to.have.property('description')
         expect(singleFormat).to.have.property('mime')
         expect(singleFormat).to.have.property('format')
+        let supported = new Set()
+        formats.forEach((format) => {
+          if (format.mime) {
+            supported.add(`${format.extension} - ${format.mime}`)
+          } else {
+            supported.add(`${format.extension}`)
+          }
+        })
+        console.log(Array.from(supported).sort())
         done()
       })
       .catch((e) => {
