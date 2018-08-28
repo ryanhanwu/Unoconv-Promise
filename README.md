@@ -55,11 +55,13 @@ unoconv.formats()
 
 Sample format
 ```json
-{ format: 'doc',
-  doctype: 'document',
-  extension: 'doc',
-  description: 'Microsoft Word 97/2000/XP',
-  mime: 'application/msword' }
+{ 
+  "format": "doc",
+  "doctype": "document",
+  "extension": "doc",
+  "description":" Microsoft Word 97/2000/XP",
+  "mime": "application/msword" 
+}
 ```
 
 ## Test
