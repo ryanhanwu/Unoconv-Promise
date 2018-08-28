@@ -1,7 +1,11 @@
 const parseOptions = require('./util').parseOptions
 const childProcess = require('child_process')
 const debug = require('debug')('unoconv:run')
-
+/**
+ * @param {Object} options
+ * @return {Promise}
+ * @api public
+ */
 exports = module.exports = function (options = {}) {
   return new Promise(function (resolve, reject) {
     const parsedOptions = parseOptions(options)

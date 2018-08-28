@@ -21,6 +21,7 @@ describe('unoconv.run()', function () {
   it('should show unoconv version', function (done) {
     unoconv
       .run({
+        verbose: true,
         version: true,
         string: true
       })

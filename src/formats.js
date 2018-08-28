@@ -2,7 +2,12 @@ const childProcess = require('child_process')
 const mime = require('mime')
 const debug = require('debug')('unoconv:formats')
 const parseOptions = require('./util').parseOptions
-
+/**
+ * Display supported conversion formats.
+ *
+ * @param {Object} options
+ * @return {Promise} An Object represents all formats supported
+ */
 exports = module.exports = function (options = {}) {
   return new Promise(function (resolve, reject) {
     options.show = true

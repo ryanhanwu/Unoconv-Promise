@@ -1,4 +1,10 @@
 const packageVersion = require('../package.json').version
+/**
+ * Show current package versions
+ *
+ * @return {Object} Package Versions
+ * @api public
+ */
 exports = module.exports = function () {
   const options = {
     version: true,

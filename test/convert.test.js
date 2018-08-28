@@ -1,3 +1,4 @@
+const fs = require('fs')
 const path = require('path')
 const chai = require('chai')
 const expect = chai.expect;
@@ -30,14 +31,16 @@ describe('unoconv.convert()', function () {
         done()
       })
   })
-  it('should convert doc file into PDF and return output path', function (done) {
+  it('should convert document first page into PDF and return output path', function (done) {
     unoconv.run({
         file: TEST_FILE,
         output: TEST_FILE_PDF,
         export: 'PageRange=1-1'
       })
-      .then((path) => {
-        expect(path).to.equal(TEST_FILE_PDF)
+      .then((outputPath) => {
+        expect(outputPath).to.equal(TEST_FILE_PDF)
+        expect(fs.existsSync(outputPath)).to.be.true
+        fs.unlinkSync(outputPath)
         done()
       })
       .catch((e) => {
