@@ -2,7 +2,7 @@
   "name": "unoconv-promise",
   "version": "0.4.0",
   "description": "Node.js wrapper with Promise for converting documents with unoconv",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "mocha --exit",
     "test:coverage": "nyc mocha --exit"
