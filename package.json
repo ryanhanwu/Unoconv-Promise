@@ -1,6 +1,6 @@
 {
   "name": "unoconv-promise",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Node.js wrapper with Promise for converting documents with unoconv",
   "main": "index.js",
   "scripts": {
