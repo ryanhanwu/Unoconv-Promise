@@ -1,6 +1,7 @@
 build
 node_modules
 coverage
+.eslintrc.js
 .editorconfig
 .gitattributes
 .gitignore
