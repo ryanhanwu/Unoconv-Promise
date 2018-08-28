@@ -7,9 +7,9 @@ const TEST_FILE = path.join(__dirname, 'sample.doc')
 const TEST_N_FILE = path.join(__dirname, 'sample2.doc')
 const TEST_N_FILE2 = path.join(__dirname, 'test.MP4')
 
-
 describe('unoconv:convert', function () {
   this.timeout(10000)
+  
   it('should convert doc file without any problem', function (done) {
     unoconv.convert(TEST_FILE)
       .then((fileBuffer) => {

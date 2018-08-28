@@ -4,7 +4,8 @@
   "description": "Node.js wrapper with Promise for converting documents with unoconv",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --exit"
+    "test": "mocha --exit",
+    "test:coverage": "nyc mocha --exit"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
   },
   "devDependencies": {
     "eslint": "^5.4.0",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "nyc": "^13.0.1"
   }
 }

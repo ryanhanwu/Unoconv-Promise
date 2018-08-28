@@ -6,13 +6,15 @@ Node.js wrapper with Promise for converting documents with unoconv, inspired by 
 
 ### Requirement
 
-[Unoconv](http://dag.wieers.com/home-made/unoconv/) is required, which requires [LibreOffice](http://www.libreoffice.org/) (or OpenOffice.)
+- [Unoconv](http://dag.wieers.com/home-made/unoconv/) 
+- [LibreOffice](http://www.libreoffice.org/) (or OpenOffice.)
 
-If you're using Mac, you can install it easily
-
+#### Mac Only
+You can install unoconv with Homebrew
 ```
 brew install unoconv
 ```
+and in order to use unoconv, a copy of LibreOffice between versions **3.6.0.1 - 4.3.x** must be installed.
 
 ### Installation
 
@@ -22,9 +24,8 @@ npm install unoconv-promise
 
 ## Usage
 
-### Convert files
-
-```
+### Basic files
+```javascript
 const unoconv = require('unoconv-promise')
 
 unoconv.convert('./mydoc.doc')
@@ -39,21 +40,31 @@ unoconv.convert('./mydoc.doc')
 
 ### Show supported formats
 
-```
+```javascript
 const unoconv = require('unoconv-promise')
 
 unoconv.formats()
   .then((formats) => {
     // formats will be an array contains supports formats
+    
   })
   .catch((e) => {
     throw(e)
   })
 ```
 
+Sample format
+```json
+{ format: 'doc',
+  doctype: 'document',
+  extension: 'doc',
+  description: 'Microsoft Word 97/2000/XP',
+  mime: 'application/msword' }
+```
+
 ## Test
 
-```
+```javascript
 npm test
 ```
 

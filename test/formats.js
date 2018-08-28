@@ -5,12 +5,18 @@ const expect = chai.expect;
 const unoconv = require('../index.js')
 
 describe('unoconv:formats', function () {
-
   it('should list all supported formats as a array', function (done) {
     unoconv.formats()
       .then((formats) => {
         expect(formats).to.be.an.instanceOf(Array)
         expect(formats).to.have.lengthOf.at.least(133) //with unoconv@0.8.2
+        const singleFormat = formats[1]
+        expect(singleFormat).to.be.an.instanceOf(Object)
+        expect(singleFormat).to.have.property('doctype')
+        expect(singleFormat).to.have.property('extension')
+        expect(singleFormat).to.have.property('description')
+        expect(singleFormat).to.have.property('mime')
+        expect(singleFormat).to.have.property('format')
         done()
       })
       .catch((e) => {
