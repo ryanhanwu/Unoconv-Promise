@@ -28,16 +28,16 @@ exports = module.exports = {
       } else {
         switch (key) {
         case 'file': // Target File
-        case 'string': //Output as string
-          break
-        case 'listener':
-          childArgs.push('-l')
-          break
-        case 'no-launch':
-          childArgs.push('-n')
+        case 'string': // Output as string
           break
         case 'output':
           childArgs.push(`-o${options[key]}`) //No Space
+          break
+        case 'listener':
+          childArgs.push('--listener')
+          break
+        case 'no-launch':
+          childArgs.push('--no-launch')
           break
         case 'preserve': //0.8.2
           childArgs.push('--preserve')
@@ -52,7 +52,7 @@ exports = module.exports = {
           childArgs.push('--stdout')
           break
         case 'verbose':
-          childArgs.push('--v')
+          childArgs.push('--verbose')
           break
         case 'version':
           childArgs.push('--version')
