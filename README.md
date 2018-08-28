@@ -13,7 +13,7 @@ This is a Node.js wrapper with native Promise support for converting documents w
 
 #### Mac Only
 
-You can install unoconv with [Homebrew](https://brew.sh/)
+With [Homebrew](https://brew.sh/)
 
 ```shell
 $ brew install unoconv
