@@ -1,5 +1,7 @@
 # Unoconv Promise
 
+[![Build Status](https://travis-ci.org/ryanhanwu/Unoconv-Promise.svg?branch=master)](https://travis-ci.org/ryanhanwu/Unoconv-Promise)
+
 This is a Node.js wrapper with native Promise support for converting documents with unoconv, inspired by [Graham Floyd's implementation](https://github.com/gfloyd/node-unoconv)
 
 ## Setup
