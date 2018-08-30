@@ -34,7 +34,8 @@ describe('unoconv.run()', function () {
       })
   })
   it('should be rejected if there\'s unknown options', function (done) {
-    unoconv.run({
+    unoconv
+      .run({
         unknown: "no sure whats this"
       })
       .then(() => {
