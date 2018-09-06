@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "test": "mocha --exit",
-    "test:coverage": "nyc mocha --exit"
+    "test:coverage": "nyc mocha --exit",
+    "test:report": "nyc --reporter=lcov  npm test"
   },
   "repository": {
     "type": "git",
