@@ -11,7 +11,7 @@ This is a Node.js wrapper with native Promise support for converting documents w
 - [Unoconv](http://dag.wieers.com/home-made/unoconv/)
   - Tested with Unoconv version [**0.8.2**](https://github.com/dagwieers/unoconv/releases/tag/0.8.2)
 - [LibreOffice](http://www.libreoffice.org/) (or OpenOffice.)
-  - Tested with LibreOffice version [**3.6.5**](https://libreoffice.en.uptodown.com/windows/download/40074)
+  - Tested with LibreOffice version **3.6.5** - [MacOS](https://libreoffice.en.uptodown.com/mac/download/40075), [Windows](https://libreoffice.en.uptodown.com/windows/download/40074)
 
 #### Mac Only
 
