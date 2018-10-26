@@ -14,6 +14,19 @@ exports = module.exports = function (options = {}) {
   const args = parsedOptions.args
 
   debug(args)
-
-  return childProcess.spawn(parsedOptions.bin, args)
+  const child = childProcess.spawn(parsedOptions.bin, args)
+  child.stdout.on('data', (data) =>{
+    debug(data.toString())
+  })
+  child.stderr.on('data', (data) => {
+    debug(data.toString())
+  })
+  child.on('close', (code) => {
+    if (code !== 0) {
+      debug(`child process exited with code ${code}`)
+    } else {
+      debug('child process exited.')
+    }
+  })
+  return child
 }

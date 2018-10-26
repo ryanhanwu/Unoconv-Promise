@@ -223,10 +223,6 @@ npm test:coverage
 - `xml` - application/xml
 - `xpm` - image/x-xpixmap'
 
-## TODO
-
-- Improve listener usage
-
 ## Reference
 
 - [unoconv](https://github.com/dagwieers/unoconv)

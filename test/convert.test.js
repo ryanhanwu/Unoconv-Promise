@@ -11,7 +11,10 @@ const TEST_N_FILE = path.join(__dirname, 'sample2.doc')
 
 describe('unoconv.convert()', function () {
   this.timeout(10000)
-
+  let child
+  before(()=>{
+    child = unoconv.listen({verbose: true})
+  })
   it('should convert doc file into PDF and return Buffer', function (done) {
     unoconv.convert(TEST_FILE)
       .then((fileBuffer) => {
@@ -47,4 +50,7 @@ describe('unoconv.convert()', function () {
         done(e)
       })
   })
+  after(function() {
+    child = unoconv.listen()
+  });
 })

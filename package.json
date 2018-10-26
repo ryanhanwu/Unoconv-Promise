@@ -1,6 +1,6 @@
 {
   "name": "unoconv-promise",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Node.js wrapper with Promise for converting documents with unoconv",
   "main": "src/index.js",
   "scripts": {
@@ -23,13 +23,13 @@
   },
   "homepage": "https://github.com/ryanhanwu/Unoconv-Promise#readme",
   "dependencies": {
-    "chai": "^4.1.2",
-    "debug": "^3.1.0",
+    "chai": "^4.2.0",
+    "debug": "^3.2.6",
     "mime": "^2.3.1"
   },
   "devDependencies": {
-    "eslint": "^5.4.0",
+    "eslint": "^5.8.0",
     "mocha": "^5.2.0",
-    "nyc": "^13.0.1"
+    "nyc": "^13.1.0"
   }
 }
