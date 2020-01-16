@@ -225,6 +225,7 @@ npm test:coverage
 
 ## Reference
 
+- [npm package](https://www.npmjs.com/package/unoconv-promise)
 - [unoconv](https://github.com/dagwieers/unoconv)
 - [node-unoconv](https://github.com/gfloyd/node-unoconv)
 - [filepreview.js](https://github.com/maxlabelle/filepreview/blob/master/filepreview.js)
