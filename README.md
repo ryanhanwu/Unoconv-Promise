@@ -109,6 +109,7 @@ Please check `unoconv -h` more details
 - `doctype`
 - `export`
 - `field`
+- `fields`: object contanig user-defined text fields with values to be relaced in the document
 - `format`(pdf): specify the output format
 - `import-filter-name`
 - `import`
@@ -131,6 +132,8 @@ Please check `unoconv -h` more details
 **Extra**
 
 - `bin` (unoconv): Binary command
+- `unoconv` (unoconv): Unoconv custom path
+- `python` (python): Python custom ptah
 - `string` (false): Return the output as string
 - `file` (null): Target file
 
