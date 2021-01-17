@@ -1,6 +1,5 @@
 # Unoconv Promise
-
-[![npm](https://img.shields.io/npm/v/unoconv-promise.svg?style=flat)](http://www.npmjs.com/package/unoconv-promise) [![Build Status](https://travis-ci.org/ryanhanwu/Unoconv-Promise.svg?branch=master&?style=flat)](https://travis-ci.org/ryanhanwu/Unoconv-Promise) [![JS.ORG](https://img.shields.io/badge/js.org-unoconv-ffb400.svg?style=flat)](https://unoconv.js.org/)
+[![npm](https://img.shields.io/npm/v/unoconv-promise.svg?style=flat)](http://www.npmjs.com/package/unoconv-promise) ![build](https://github.com/ryanhanwu/Unoconv-Promise/workflows/testing/badge.svg) [![JS.ORG](https://img.shields.io/badge/js.org-unoconv-ffb400.svg?style=flat)](https://unoconv.js.org/)
 
 This is a Node.js wrapper with native Promise support for converting documents with unoconv, inspired by [Graham Floyd's implementation](https://github.com/gfloyd/node-unoconv)
 
