@@ -16,7 +16,7 @@
     "unoconv",
     "convert"
   ],
-  "author": "Ryan Wu <hello@ryanwu.me>",
+  "author": "Ryan Wu <ryanhanwu@pm.me>",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/ryanhanwu/Unoconv-Promise/issues"
@@ -28,8 +28,8 @@
     "mime": "^2.4.0"
   },
   "devDependencies": {
-    "eslint": "^5.15.3",
-    "mocha": "^6.0.2",
-    "nyc": "^13.3.0"
+    "eslint": "^7.18.0",
+    "mocha": "^8.2.1",
+    "nyc": "^15.1.0"
   }
 }

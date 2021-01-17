@@ -15,6 +15,9 @@ describe('unoconv.version()', function () {
         expect(versionObj).to.have.property('unoconv-promise')
         done()
       })
+      .catch((e) => {
+        done(e)
+      })
   })
 })
 describe('unoconv.run()', function () {
