@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "eslint": "^7.18.0",
-    "mocha": "^8.2.1",
+    "mocha": "^10.2.0",
     "nyc": "^15.1.0"
   }
 }
